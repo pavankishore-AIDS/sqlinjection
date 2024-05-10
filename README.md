@@ -36,6 +36,7 @@ Click on the menu Login/Register and register for an account
 ![ethical3](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/f17451b1-03b1-455f-8e8f-0b3999866c96)
 
 
+
 Click on the link “Please register here”
 ![ethical4](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/7052031d-08db-4ee8-9155-aa2695e9c341)
 
@@ -103,19 +104,18 @@ http://192.168.0.109/mutillidae/index.php?page=user-info.php&username=pavan%27or
 
 After adding the order by 6 into the existing url , the following error statement will be obtained:
 
-![ethical10](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/ba111450-b3bc-4229-85d7-819254cd0b1e)
+![ethical13](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/0f27bbd7-c3c4-494f-bacb-e59528574ee5)
+
 
 
 
 When we ordered by 5, it worked and displayed some information. It means there are five columns that we can work with. Following screenshot shows that the url modified to have statement added with ordered by 5 replacing 6.
-![ethical10](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/7d648305-3f93-49c3-a20d-f3f8a1f0872f)
+![ethical14](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/844e229e-b145-437a-a1c3-c8b8dac938e6)
 
 
  As it is having 5 columns the query worked fine and it provides the correct result
 
-![ethical10](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/31905fab-a6e0-49aa-958b-9f7e4b9286f1)
-
-
+![ethical17](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/eed8b292-d49d-4fdc-a65c-de2a267970fc)
 
 
 Instead of using the "order by" option, let’s use the "union select" option and provide all five columns. Ex: (union select 1,2,3,4,5)
