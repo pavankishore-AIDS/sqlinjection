@@ -163,15 +163,11 @@ The column names of the accounts is displayed below for the following url:
 ![WhatsApp Image 2024-05-10 at 20 12 47_5fffdd69](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/b7114103-1e21-42a6-8aaf-1b03598b408f)
 
 
-
-
-
-
 Once we discovered all available column names, we can extract information from them by just adding those column names in our query sentence.
 
 Ex: (union select 1,username,password,is_admin,5 from accounts).
 
-![WhatsApp Image 2024-05-10 at 20 15 38_8edb5b87](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/bcdf89f9-6a28-49a4-beda-74941a31a3cf)
+
 
 
 
@@ -181,7 +177,7 @@ We can use the “LOAD_FILE()” operator to peruse the contents of any file con
 
 Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 
-
+![WhatsApp Image 2024-05-10 at 20 15 38_8edb5b87](https://github.com/pavankishore-AIDS/sqlinjection/assets/94154941/bcdf89f9-6a28-49a4-beda-74941a31a3cf)
 
 the “INTO_OUTFILE()” operator for all that they offer and attempt to root the objective server by transferring a shell-code through SQL infusion. we will write a “Hello World!” sentence and output it in the “/tmp/” directory as a “hello.txt” file. This “Hello World!” sentence can be substituted with any PHP shell-code that you want to execute in the target server.
 Ex: (union select null,’Hello World!’,null,null,null into outfile ‘/tmp/hello.txt’).
